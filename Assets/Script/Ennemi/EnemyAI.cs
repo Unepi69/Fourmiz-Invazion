@@ -11,6 +11,8 @@ public class EnemyAI : MonoBehaviour
     
     private Transform player;
     private Rigidbody2D rb;
+    
+    public Color debugColor = new Color(1f, 0f, 0f, 0.2f);
 
     void Start()
     {
@@ -64,5 +66,13 @@ public class EnemyAI : MonoBehaviour
 
             nextAttackTime = Time.time + attackRate;
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = debugColor;
+       
+        Gizmos.color = new Color(debugColor.r, debugColor.b, 0.1f);
+        Gizmos.DrawSphere(transform.position, detectionRange);
     }
 }

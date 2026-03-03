@@ -24,9 +24,7 @@ public class PlayerInventory : MonoBehaviour
         // On met à jour le texte du HUD immédiatement
         UpdateUI();
 
-        // Si on gagne des ressources (amount positif), on pourrait aussi 
-        // déclencher le texte flottant ici, mais c'est mieux dans ResourceItem
-        // pour que le texte apparaisse SUR la pièce ramassée.
+  
     }
 
     public void UpdateUI()

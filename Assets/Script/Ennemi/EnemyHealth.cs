@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [Header("Stats")]
     public float maxHealth = 100f;
-    private float currentHealth;
+    public float currentHealth;
 
     [Header("UI & Feedbacks")]
     public Slider healthSlider;
@@ -19,6 +19,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject deathEffect;    
     public GameObject healthPackPrefab;
     public float dropChance = 20f;
+    
 
     void Start()
     {
@@ -35,19 +36,19 @@ public class EnemyHealth : MonoBehaviour
 
     void Update()
     {
-        // Effet de barre de vie réactive (le slider rattrape doucement la valeur)
+        
         if (healthSlider != null && healthSlider.value != currentHealth)
         {
             healthSlider.value = Mathf.Lerp(healthSlider.value, currentHealth, Time.deltaTime * smoothSpeed);
         }
     }
 
-    // CETTE FONCTION EST CELLE APPELÉE PAR LA BALLE
+   
     public void TakeDamage(float amount)
     {
         currentHealth -= amount;
 
-        // Déclenche le flash blanc
+        
         StopAllCoroutines();
         StartCoroutine(FlashRoutine());
 
@@ -69,25 +70,37 @@ public class EnemyHealth : MonoBehaviour
 
     void Die()
     {
-        // 1. Explosion de particules
+        
         if (deathEffect != null)
         {
             Instantiate(deathEffect, transform.position, Quaternion.identity);
         }
 
-        // 2. Spawn de la ressource volante
+        
         if (resourcePrefab != null)
         {
             Instantiate(resourcePrefab, transform.position, Quaternion.identity);
         }
 
-        // 3. Chance de drop un pack de soin
+        
         float random = Random.Range(0f, 100f);
         if (random <= dropChance && healthPackPrefab != null)
         {
             Instantiate(healthPackPrefab, transform.position, Quaternion.identity);
         }
 
-        Destroy(gameObject);
+        if (GetComponent<BossAI>() != null)
+        {
+            gameObject.SetActive(false);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public float GetCurrentHealth()
+    {
+        return currentHealth;
     }
 }
