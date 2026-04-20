@@ -8,12 +8,14 @@ public class BossTrigger : MonoBehaviour
     public Transform respawnPoint;
     public GameObject victoryScreen; 
     private bool victoryTriggered = false;
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-       
-        if (other.CompareTag("Player") && bossScript != null && !bossScript.isActivated)
+       Debug.Log(other.name);
+        if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("je suis la fdp");
             bossScript.ActivateBoss();
         }
     }
@@ -44,7 +46,7 @@ public class BossTrigger : MonoBehaviour
         }
 
         // 3. Faire respawn le boss pour la prochaine fois
-        bossScript.ResetBoss();
+        //if(bossScript.ResetBoss();
 
         // 4. Cacher l'écran de victoire et réinitialiser le trigger
         if (victoryScreen != null) victoryScreen.SetActive(false);

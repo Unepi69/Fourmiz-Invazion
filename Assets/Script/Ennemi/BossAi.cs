@@ -8,7 +8,7 @@ public class BossAI : MonoBehaviour
 
     [Header("Stats de Base")]
     public float speed = 2f;
-    private Transform player;
+    public Transform player;
     private EnemyHealth health;
     private SpriteRenderer sr;
 
@@ -27,10 +27,7 @@ public class BossAI : MonoBehaviour
         startPosition = transform.position;
         sr = GetComponent<SpriteRenderer>();
         originalColor = sr.color;
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        health = GetComponent<EnemyHealth>();
-        sr = GetComponent<SpriteRenderer>();
-        
+
         if(bossUI != null) bossUI.SetActive(false);
     }
     public void ResetBoss()
@@ -67,7 +64,7 @@ public class BossAI : MonoBehaviour
         float currentSpeed = isPhase2 ? speedPhase2 : speed;
         float distance = Vector3.Distance(transform.position, player.position);
         
-        if (distance > 1.2f)
+        if (distance > 1.2f && player != null)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.position, currentSpeed * Time.deltaTime);
         }
@@ -86,6 +83,9 @@ public class BossAI : MonoBehaviour
 
     public void ActivateBoss()
     {
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        health = GetComponent<EnemyHealth>();
+        sr = GetComponent<SpriteRenderer>();
         isActivated = true;
         if(bossUI != null) bossUI.SetActive(true);
     }

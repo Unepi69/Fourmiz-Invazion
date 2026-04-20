@@ -3080,7 +3080,7 @@ Transform:
   m_GameObject: {fileID: 471526410}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 283.04773, y: 0, z: -0}
+  m_LocalPosition: {x: 73, y: 333.72, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8945,7 +8945,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 11.21, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1200784952
 MonoBehaviour:
@@ -8959,7 +8959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2d13be8813f189458ba4d29bc1ed001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossTrigger
-  bossScript: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+  bossScript: {fileID: 1193498571239890942}
   respawnPoint: {fileID: 471526411}
   victoryScreen: {fileID: 633840038}
 --- !u!4 &1200784953
@@ -8971,7 +8971,7 @@ Transform:
   m_GameObject: {fileID: 1200784950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 283.04773, y: 0, z: -0}
+  m_LocalPosition: {x: 70.5, y: 305.18, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12864,7 +12864,7 @@ RectTransform:
   m_Father: {fileID: 648800037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0.001, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12881,7 +12881,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -12983,15 +12983,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1830431794}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 1000
+  m_WholeNumbers: 1
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -13306,14 +13306,14 @@ RectTransform:
   m_GameObject: {fileID: 1977313009}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.97499, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1837708158}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -5.5, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1977313011
@@ -13329,7 +13329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14099,16 +14099,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: bossUI
       value: 
       objectReference: {fileID: 1837708157}
+    - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+      propertyPath: isActivated
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4536234288646125158, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 283.04776
+      value: 71.88
       objectReference: {fileID: 0}
     - target: {fileID: 4536234288646125158, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 333.82
       objectReference: {fileID: 0}
     - target: {fileID: 4536234288646125158, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14146,13 +14154,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8118310204022917475, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6220757639860826601, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8118310204022917475, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1193498571239890940}
+    - targetCorrespondingSourceObject: {fileID: 8118310204022917475, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193498571239890946}
+    - targetCorrespondingSourceObject: {fileID: 8118310204022917475, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193498571239890945}
+    - targetCorrespondingSourceObject: {fileID: 8118310204022917475, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1193498571239890947}
   m_SourcePrefab: {fileID: 100100000, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
 --- !u!1 &1193498571239890939 stripped
 GameObject:
@@ -14173,12 +14195,114 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 1000
   currentHealth: 0
-  healthSlider: {fileID: 0}
+  healthSlider: {fileID: 1837708159}
   smoothSpeed: 5
-  resourcePrefab: {fileID: 0}
-  deathEffect: {fileID: 0}
-  healthPackPrefab: {fileID: 0}
-  dropChance: 20
+  resourcePrefab: {fileID: 1655646795342285971, guid: 12fc1181ffbf5bd4cb0a240c16260889, type: 3}
+  deathEffect: {fileID: 4207716103903410655, guid: 4f1691a75424c154f972d23e7e208de3, type: 3}
+  healthPackPrefab: {fileID: 343086564370497311, guid: 0cfde826536dab645a5051b4263ff99e, type: 3}
+  dropChance: 5
+--- !u!114 &1193498571239890942 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
+  m_PrefabInstance: {fileID: 1193498571239890938}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193498571239890939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe1e0534615aca4a86ee1a36a07a2e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BossAI
+--- !u!50 &1193498571239890945
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193498571239890939}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1193498571239890946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193498571239890939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4e4ae6c51b6074498005db74bebebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  moveSpeed: 3
+  detectionRange: 10
+  attackRange: 1.5
+  damage: 10
+  attackRate: 1
+  debugColor: {r: 1, g: 0, b: 0, a: 0.2}
+--- !u!61 &1193498571239890947
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193498571239890939}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &5417399083115754818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14189,11 +14313,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6300067920616781807, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 70.4
       objectReference: {fileID: 0}
     - target: {fileID: 6300067920616781807, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 296.5
       objectReference: {fileID: 0}
     - target: {fileID: 6300067920616781807, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: m_LocalPosition.z
