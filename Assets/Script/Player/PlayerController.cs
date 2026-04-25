@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
     public float maxHealth = 100f;
     private float currentHealth;
     public Transform respawnPoint;
+    public BoostJoueur reset;
+    public MerchantSystem merchantSystem;
     
     public Slider healthSlider;
     public TextMeshProUGUI healthText;
@@ -29,6 +31,7 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = maxHealth;
         UpdateHealthUI();
+        reset.isInvulnerable = false;
     }
     
     void Update()
@@ -61,6 +64,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    
     void FindClosestTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -80,15 +84,20 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        currentHealth -= amount;
-        currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
-        Debug.Log("Vie du joueur : " + currentHealth);
-        UpdateHealthUI();
-        
+        if (!reset.isInvulnerable)
+        {
+            currentHealth -= amount;
+            currentHealth = Mathf.Clamp(currentHealth, 0, maxHealth);
+            Debug.Log("Vie du joueur : " + currentHealth);
+            UpdateHealthUI();
+        }
+
         if (currentHealth <= 0f)
         {
             Debug.Log("Game Over !");
             Respawn();
+            merchantSystem.canBuy = true;
+            reset.ResetBoost();
         }
     }
     public void UpdateMaxHealth(float bonus)
