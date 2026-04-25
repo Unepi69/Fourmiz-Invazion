@@ -46,7 +46,8 @@ public class BossTrigger : MonoBehaviour
         }
 
         // 3. Faire respawn le boss pour la prochaine fois
-        //if(bossScript.ResetBoss();
+        
+        bossScript.ResetBoss();
 
         // 4. Cacher l'écran de victoire et réinitialiser le trigger
         if (victoryScreen != null) victoryScreen.SetActive(false);

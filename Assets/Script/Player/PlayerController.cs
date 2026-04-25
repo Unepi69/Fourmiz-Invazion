@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
     {
         transform.position = respawnPoint.position;
         currentHealth = maxHealth;
+        UpdateHealthUI();
         Debug.Log("Respawn effectué");
 
         EnemySpawner.playerReturnedToSpawn = true;
