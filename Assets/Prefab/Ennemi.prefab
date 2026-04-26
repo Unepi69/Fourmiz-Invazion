@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9584458, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -267,12 +267,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 50
+  currentHealth: 0
   healthSlider: {fileID: 3149006907240249689}
   smoothSpeed: 5
   resourcePrefab: {fileID: 1655646795342285971, guid: 12fc1181ffbf5bd4cb0a240c16260889, type: 3}
   deathEffect: {fileID: 4207716103903410655, guid: 4f1691a75424c154f972d23e7e208de3, type: 3}
   healthPackPrefab: {fileID: 343086564370497311, guid: 0cfde826536dab645a5051b4263ff99e, type: 3}
-  dropChance: 100
+  dropChance: 25
 --- !u!114 &8123468134840747058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,11 +286,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4e4ae6c51b6074498005db74bebebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  moveSpeed: 3
+  moveSpeed: 4
   detectionRange: 50
   attackRange: 0.1
-  damage: 1
+  damage: 4
   attackRate: 1
+  debugColor: {r: 1, g: 0, b: 0, a: 0.2}
 --- !u!50 &4113996166238334380
 Rigidbody2D:
   serializedVersion: 5

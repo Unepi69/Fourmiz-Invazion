@@ -11,6 +11,7 @@ public class BoostJoueur : MonoBehaviour
    public EnemySpawner player;
    [Header("Dash")]
    public bool hasDashUnlocked = false;
+   public MerchantSystem merchantSystem;
 
    public float dashForce = 10f;
    private Rigidbody2D rb;
@@ -41,6 +42,10 @@ public class BoostJoueur : MonoBehaviour
       {
          hasDashUnlocked = false;
          hasInvincibilityUnlocked = false;
+         merchantSystem.iconInvisibility.SetActive(false);
+         merchantSystem.iconFireRate.SetActive(false);
+         merchantSystem.iconMaxHealth.SetActive(false);
+
       }
          
    }

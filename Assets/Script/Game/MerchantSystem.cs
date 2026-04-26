@@ -1,5 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using TMPro;
+
 
 public class MerchantSystem : MonoBehaviour
 {
@@ -10,7 +13,16 @@ public class MerchantSystem : MonoBehaviour
     public PlayerController playerController;
     private bool isPlayerInside = false;
     public bool canBuy = true;
-    
+
+    public GameObject iconInvisibility;
+    public GameObject iconFireRate;
+    public GameObject iconMaxHealth;
+    public GameObject visualPrompt;
+
+    void Start()
+    {
+        if(visualPrompt != null) visualPrompt.SetActive(false);
+    }
 
     public void TrybuyReward()
     {
@@ -19,6 +31,7 @@ public class MerchantSystem : MonoBehaviour
             playerInventory.resources -= price;
             RewardData reward = GetRandomReward();
             ApplyReward(reward);
+            if(visualPrompt != null) visualPrompt.SetActive(false);
             canBuy = false;
             Debug.Log("Bravo ! Tu as reçu :" + reward.itemName);
             
@@ -35,18 +48,17 @@ public class MerchantSystem : MonoBehaviour
         {
             case RewardType.Invincibility:
                 boostJoueur.hasInvincibilityUnlocked = true;
-                break;
-            
-            case RewardType.Dash:
-                boostJoueur.hasDashUnlocked = true;
+                if(iconInvisibility != null) iconInvisibility.SetActive(true);
                 break;
             
             case RewardType.FireRate:
                 playerController.fireRate += reward.value;
+                if(iconFireRate != null) iconFireRate.SetActive(true);
                 break;
             
             case RewardType.MaxHealth:
                 playerController.maxHealth += reward.value;
+                if(iconMaxHealth != null) iconMaxHealth.SetActive(true);
                 break;
         }
     }
@@ -55,6 +67,10 @@ public class MerchantSystem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInside = true;
+            if (canBuy && visualPrompt != null)
+            {
+                visualPrompt.SetActive(true);
+            }
             Debug.Log("Appuie sur F pour acheter");
         }
     }
@@ -63,6 +79,13 @@ public class MerchantSystem : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInside = false;
+            if (visualPrompt != null)
+            {
+                visualPrompt.SetActive(false);
+            }
+            {
+                
+            }
         }
     }
     void Update()

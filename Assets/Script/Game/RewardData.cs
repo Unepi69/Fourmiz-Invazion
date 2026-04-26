@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public enum RewardType {Invincibility, FireRate, Dash, MaxHealth}
+public enum RewardType {Invincibility, FireRate, MaxHealth}
 [CreateAssetMenu(fileName = "NouvelleRecompense", menuName = "Marchand/Recompense")]
 public class RewardData : ScriptableObject
 {

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5258293702301031623}
   - component: {fileID: 5567457906259072825}
   m_Layer: 0
-  m_Name: FourmisPart
+  m_Name: BossPart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e5c0e31c9b26d4c9f66e038c9d51f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RessourceItem
-  value: 10
+  value: 70
   followSpeed: 8
 --- !u!50 &-5258293702301031623
 Rigidbody2D:
