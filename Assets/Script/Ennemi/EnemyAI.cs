@@ -21,6 +21,10 @@ public class EnemyAI : MonoBehaviour
         if (playerObj != null) player = playerObj.transform;
     }
 
+    public void AddDamage(float amount = 10f)
+    {
+       damage += amount;
+    }
     void Update()
     {
         if (player == null) return;

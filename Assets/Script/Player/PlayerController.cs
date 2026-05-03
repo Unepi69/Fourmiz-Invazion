@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody2D rb;
     public Weapon weapon;
 
+    public EnemyHealth EnemyHealth;
     public string enemyTag = "Enemy";
     public float range = 10f;
     public float fireRate = 0.5f;
@@ -16,12 +17,14 @@ public class PlayerController : MonoBehaviour
     
     private Vector2 moveDirection;
     private Transform target;
-    
+    public BossAI boss;
     public float maxHealth = 100f;
-    private float currentHealth;
+    public float currentHealth;
     public Transform respawnPoint;
     public BoostJoueur reset;
     public MerchantSystem merchantSystem;
+    public AreaManager arenaManager;
+    public EnemySpawner spawnerEnemy;
     
     public Slider healthSlider;
     public TextMeshProUGUI healthText;
@@ -39,6 +42,7 @@ public class PlayerController : MonoBehaviour
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
         moveDirection = new Vector2(moveX, moveY).normalized;
+        UpdateHealthUI();
 
         FindClosestTarget();
 
@@ -98,6 +102,9 @@ public class PlayerController : MonoBehaviour
             Respawn();
             merchantSystem.canBuy = true;
             reset.ResetBoost();
+            boss.ResetBoss();
+            arenaManager.arenaCleared = false;
+            spawnerEnemy.spawnedCount = 0;
         }
     }
     public void UpdateMaxHealth(float bonus)

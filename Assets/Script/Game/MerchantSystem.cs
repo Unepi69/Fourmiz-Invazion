@@ -52,12 +52,13 @@ public class MerchantSystem : MonoBehaviour
                 break;
             
             case RewardType.FireRate:
-                playerController.fireRate += reward.value;
+                playerController.fireRate -= reward.value;
                 if(iconFireRate != null) iconFireRate.SetActive(true);
                 break;
             
             case RewardType.MaxHealth:
                 playerController.maxHealth += reward.value;
+                playerController.currentHealth =  playerController.maxHealth;
                 if(iconMaxHealth != null) iconMaxHealth.SetActive(true);
                 break;
         }

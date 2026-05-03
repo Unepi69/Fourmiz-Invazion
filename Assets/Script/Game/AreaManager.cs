@@ -4,8 +4,8 @@ public class AreaManager : MonoBehaviour
 {
   public GameObject arenaGate;
   public EnemySpawner[] spawners;
-  
-  private bool arenaCleared = false;
+  public EnemySpawner spawn;
+  public bool arenaCleared = false;
 
   void Update()
   {
@@ -28,8 +28,9 @@ public class AreaManager : MonoBehaviour
       }
     }
 
-    if (!enemiesLeft)
+    if (spawn.enemydeath = true)
     {
+      Debug.Log("Tout les ennemis sont mort");
       arenaCleared = true;
       OpenGate();
     }

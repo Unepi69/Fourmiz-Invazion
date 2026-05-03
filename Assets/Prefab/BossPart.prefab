@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7e5c0e31c9b26d4c9f66e038c9d51f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RessourceItem
-  value: 70
+  value: 100
   followSpeed: 8
 --- !u!50 &-5258293702301031623
 Rigidbody2D:

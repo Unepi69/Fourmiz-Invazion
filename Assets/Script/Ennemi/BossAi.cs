@@ -11,6 +11,7 @@ public class BossAI : MonoBehaviour
     public Transform player;
     private EnemyHealth health;
     private SpriteRenderer sr;
+    public EnemyAI enemyAI;
 
     [Header("Phase 2")]
     public float speedPhase2 = 4.5f;   
@@ -77,10 +78,14 @@ public class BossAI : MonoBehaviour
         
         
         if (sr != null) sr.color = colorPhase2;
+        if(isPhase2 = true)
+        {
+            enemyAI.AddDamage();
+        }
         
         
     }
-
+    
     public void ActivateBoss()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;

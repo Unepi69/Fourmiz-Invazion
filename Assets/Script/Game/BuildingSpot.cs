@@ -42,8 +42,8 @@ public class BuildingSpot : MonoBehaviour
    void DeterminerPrix()
    {
       string typeStr = typeDuBatiment.ToString();
-      if (typeStr.Contains("1")) prix = 2000;
-      else if (typeStr.Contains("2")) prix = 3000;
+      if (typeStr.Contains("1")) prix = 1000;
+      else if (typeStr.Contains("2")) prix = 2500;
       else if (typeStr.Contains("3")) prix = 4000;
    }
 

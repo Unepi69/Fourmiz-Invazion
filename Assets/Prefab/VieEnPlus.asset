@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: VieEnPlus
   m_EditorClassIdentifier: Assembly-CSharp::RewardData
   itemName: VieEnplus
-  type: 3
-  value: 20
+  type: 2
+  value: 250
   icon: {fileID: 0}
   weight: 25

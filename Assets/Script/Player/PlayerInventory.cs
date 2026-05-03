@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using TMPro; // N'oublie pas d'importer TextMeshPro
 
@@ -13,6 +14,11 @@ public class PlayerInventory : MonoBehaviour
     void Start()
     {
         // On initialise l'affichage au début du jeu
+        UpdateUI();
+    }
+
+    private void Update()
+    {
         UpdateUI();
     }
 

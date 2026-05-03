@@ -1258,14 +1258,14 @@ RectTransform:
   m_GameObject: {fileID: 86406074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1175526062}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -50}
+  m_AnchoredPosition: {x: 100, y: -25}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &86406076
@@ -1433,9 +1433,9 @@ MonoBehaviour:
   - {fileID: 712192001}
   - {fileID: 1282892313}
   - {fileID: 1839977981}
-  maxEnemies: 10
+  maxEnemies: 2
   spawnRate: 1
-  totalToSpawn: 36
+  totalToSpawn: 2
   currentEnemies: 0
   allEnemiesSpawned: 0
   spawnedCount: 0
@@ -10918,8 +10918,8 @@ RectTransform:
   m_GameObject: {fileID: 1101266749}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1520488611}
   - {fileID: 2129320093}
@@ -10928,7 +10928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: -50}
+  m_AnchoredPosition: {x: -25, y: -25}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1101266751
@@ -11097,7 +11097,7 @@ RectTransform:
   m_GameObject: {fileID: 1145341531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4999999, y: 1.4999999, z: 1.4999999}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 947433521}
@@ -14879,8 +14879,8 @@ RectTransform:
   m_GameObject: {fileID: 1520488610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7260239}
   m_Father: {fileID: 1101266750}
@@ -15161,8 +15161,8 @@ RectTransform:
   m_GameObject: {fileID: 1568050183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1101266750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16873,8 +16873,8 @@ RectTransform:
   m_GameObject: {fileID: 1837708157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1977313010}
   - {fileID: 648800037}
@@ -16883,7 +16883,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -494}
+  m_AnchoredPosition: {x: 0, y: -114.5}
   m_SizeDelta: {x: 350, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1837708159
@@ -18496,8 +18496,8 @@ RectTransform:
   m_GameObject: {fileID: 2129320092}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1101266750}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18645,7 +18645,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: speed
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: bossUI
@@ -18656,16 +18656,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 248690184}
     - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
-      propertyPath: enemyAI
-      value: 
-      objectReference: {fileID: 1193498571239890946}
-    - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: isActivated
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
-      propertyPath: speedPhase2
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2758876492488228068, guid: 7091e2101abe4b442bf57a151267b74a, type: 3}
       propertyPath: colorPhase2.b
@@ -18822,7 +18814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a4e4ae6c51b6074498005db74bebebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
-  moveSpeed: 5
+  moveSpeed: 6
   detectionRange: 10
   attackRange: 1.5
   damage: 25
@@ -18904,11 +18896,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6300067920616781807, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.6
+      value: -12.6
       objectReference: {fileID: 0}
     - target: {fileID: 6300067920616781807, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.5
+      value: 71.6
       objectReference: {fileID: 0}
     - target: {fileID: 6300067920616781807, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -18971,14 +18963,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 504125847}
     - target: {fileID: 9164073541610001607, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
-      propertyPath: EnemyHealth
-      value: 
-      objectReference: {fileID: 1193498571239890940}
-    - target: {fileID: 9164073541610001607, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
-      propertyPath: arenaManager
-      value: 
-      objectReference: {fileID: 403549440}
-    - target: {fileID: 9164073541610001607, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: healthSlider
       value: 
       objectReference: {fileID: 1145341533}
@@ -18986,10 +18970,6 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1388829652}
-    - target: {fileID: 9164073541610001607, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
-      propertyPath: spawnerEnemy
-      value: 
-      objectReference: {fileID: 107461002}
     - target: {fileID: 9164073541610001607, guid: c00273f7b42076f4587d65f7ef606f4e, type: 3}
       propertyPath: merchantSystem
       value: 

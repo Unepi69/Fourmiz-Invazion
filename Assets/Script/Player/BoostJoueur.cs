@@ -38,15 +38,13 @@ public class BoostJoueur : MonoBehaviour
 
    public void ResetBoost()
    {
-      if (EnemySpawner.playerReturnedToSpawn = true)
-      {
+      
          hasDashUnlocked = false;
          hasInvincibilityUnlocked = false;
          merchantSystem.iconInvisibility.SetActive(false);
          merchantSystem.iconFireRate.SetActive(false);
          merchantSystem.iconMaxHealth.SetActive(false);
-
-      }
+      
          
    }
 

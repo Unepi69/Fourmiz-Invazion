@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
@@ -9,16 +10,20 @@ public class EnemySpawner : MonoBehaviour
    public int maxEnemies = 5;
    public float spawnRate = 2f;
 
-   // --- AJOUTS POUR ARENA MANAGER ---
-   public int totalToSpawn = 10; // Nombre total d'ennemis pour cette zone
-   [HideInInspector] public int currentEnemies; // Ennemis vivants
+   public int totalToSpawn = 10;
+   [HideInInspector] public int currentEnemies; 
    [HideInInspector] public bool allEnemiesSpawned = false;
-   private int spawnedCount = 0;
+   public int spawnedCount = 0;
+    public bool enemydeath = false;
    // ---------------------------------
 
    public static bool playerReturnedToSpawn = true;
    private float nextSpawnTime;
 
+   void Start()
+   {
+      enemydeath = false;
+   }
    private void Update()
    {
       // On compte les ennemis vivants sur la map
@@ -38,8 +43,15 @@ public class EnemySpawner : MonoBehaviour
       if (spawnedCount >= totalToSpawn)
       {
          allEnemiesSpawned = true;
+         Debug.Log("All enemies spawned");
+      }
+
+      if (allEnemiesSpawned = true && currentEnemies <= 0)
+      {
+         enemydeath = true;
       }
    }
+   
 
    void SpawnEnemy()
    {

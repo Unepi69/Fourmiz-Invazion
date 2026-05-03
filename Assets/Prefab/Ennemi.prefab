@@ -287,9 +287,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   moveSpeed: 4
-  detectionRange: 50
-  attackRange: 0.1
-  damage: 4
+  detectionRange: 10
+  attackRange: 0.3
+  damage: 10
   attackRate: 1
   debugColor: {r: 1, g: 0, b: 0, a: 0.2}
 --- !u!50 &4113996166238334380
